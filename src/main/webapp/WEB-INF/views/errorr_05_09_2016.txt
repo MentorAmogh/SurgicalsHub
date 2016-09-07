@@ -1,0 +1,9 @@
+org.apache.jasper.JasperException: An exception occurred processing JSP page /WEB-INF/views/register.jsp at line 29
+
+26: 					<div class="header-left-bottom agileinfo">
+27: 
+28: 					 <form:form action="#" method="get" commandName="register">
+29: 					 <form:input type="text" path="rname" placeholder="User Name"/>   
+30: 					<form:input type="text" path="rid" placeholder="User Id"/>					
+31: 					<form:input type="password" path="rpassword" placeholder="Password"/>
+32: 		

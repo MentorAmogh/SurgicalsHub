@@ -1,0 +1,6 @@
+name
+user id
+password
+email
+mobile
+address
