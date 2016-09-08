@@ -7,6 +7,21 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
 <!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<style type="text/css">
+.carousel {
+	background: #2f4357;
+	margin-top: 20px;
+}
+
+.carousel .item img {
+	margin: 0 auto; /* Align slide image horizontally center */
+}
+
+.bs-example {
+	margin: 20px;
+}
+</style>
 	<style>
 h1 {
 	color: #fff;
@@ -42,12 +57,12 @@ text-shadow: #fff 0 -1px 24px, #ff0 0 -2px 30px, #ff8000 0 -10px 20px, red 0 -18
 				</div>
 				<ul class="nav navbar-nav">
 					<li class="active"><a href="#">Home <span class="glyphicon glyphicon-home"></span></a></li>
-					<li><a href="login">Login <span class="glyphicon glyphicon-log-in"></span></a></li>
-					<li><a href="register">Register <span class="glyphicon glyphicon-registration-mark"></span></a></li>
-					<li><a href="products">Products </a></li>
-					<li><a href="contact">Contact Us <span class="glyphicon glyphicon-envelope"></span></a></li>
-					<li><a href="about">About Us </a></li>
-					<li><a href="admin">Manage Category <span class="glyphicon glyphicon-log-out"></span></a></li>
+					<li><a href="login">Add Supplier <span class="glyphicon glyphicon-log-in"></span></a></li>
+					<li><a href="register">Add Product <span class="glyphicon glyphicon-registration-mark"></span></a></li>
+					<li><a href="products">Change Role </a></li>
+					<li><a href="contact">Update Stock<span class="glyphicon glyphicon-envelope"></span></a></li>
+					<li><a href="about">Delete Category </a></li>
+					<li><a href="category">Add Category <span class="glyphicon glyphicon-log-out"></span></a></li>
 					
 				</ul>
 					<form class="navbar-form" role="search">

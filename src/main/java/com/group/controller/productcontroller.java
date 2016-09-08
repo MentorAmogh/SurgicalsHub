@@ -23,6 +23,4 @@ public class productcontroller {
 			M.addAttribute("proddata", prodlist);
 			return "products";
 		}
-	
-	
-}
+	}

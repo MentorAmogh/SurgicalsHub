@@ -1,5 +1,5 @@
 <!-- <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="a"%>  -->
-<jsp:include page="CommonHeader.jsp"/>
+<%@ include file="/WEB-INF/views/CommonHeader.jsp"%>
  <!--
  <table>
  
@@ -16,7 +16,7 @@
 </a:forEach>
 </table>
 -->
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+
 <script>
   var prod = ${proddata};
   angular.module('repeatSample', []).controller('productcontroller', function($scope)
@@ -31,7 +31,7 @@
               
     });
 </script>
-
+<body >
 <div  ng-app="repeatSample" ng-controller="productcontroller">
 <style>
 .center {
@@ -60,6 +60,7 @@ Search <input type="text" placeholder="Search products" ng-model="searchText"/>
 </table>
 </div>
 </div>
+</body>
 
 
 

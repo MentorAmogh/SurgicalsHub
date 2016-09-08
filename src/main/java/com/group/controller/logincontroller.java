@@ -17,18 +17,30 @@ import com.group.model.Register;
 
 @Controller
 public class logincontroller {
+public logincontroller()
+{
+//	System.out.println("In controller");
+}
+	@RequestMapping("/contact")
+	public String showContact()
+	{
+		return "contact";
+	}
 
-	
 	@RequestMapping("/about")
 	public String showAbout()
 	{
-		System.out.println("AboutUs");
 		return "about";
 	}
 	@RequestMapping("/CommonHeader")
 	public String showHeader()
 	{
 		return "CommonHeader";
+	}
+	@RequestMapping("/admin")
+	public String showAdmin()
+	{
+		return "admin";
 	}
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public ModelAndView showlogin() {

@@ -1,14 +1,25 @@
-<jsp:include page="CommonHeader"/>
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-	integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-	crossorigin="anonymous"></script>
-<style type="text/css">
+<%@ include file="/WEB-INF/views/CommonHeader.jsp"%>
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>   
+ <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 70%;
+      margin: auto;
+  }
+
+
+
+
+
+
 .carousel {
 	background: #2f4357;
-	margin-top: 20px;
+	margin-top: 120px;
 }
 
 .carousel .item img {
@@ -19,62 +30,54 @@
 	margin: 20px;
 }
 </style>
-</head>
-<body>
+	<style>
+h1 {
+	color: #fff;
+	font-face: Rio Grande Striped;
+	
+background-color: #333;
+text-shadow: #fff 0 -1px 24px, #ff0 0 -2px 30px, #ff8000 0 -10px 20px, red 0 -18px 40px;
+}
+</style>
+		
+		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+    <li data-target="#myCarousel" data-slide-to="3"></li>
+  </ol>
 
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <img src="resources/images/image2.jpg" alt="Chania">
+    </div>
 
-		<div class="bs-example">
-			<div id="myCarousel" class="carousel slide" data-ride="carousel" height="200">
-				<!-- Carousel indicators -->
-				<ol class="carousel-indicators">
-					<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-					<li data-target="#myCarousel" data-slide-to="1"></li>
-					<li data-target="#myCarousel" data-slide-to="2"></li>
-					<li data-target="#myCarousel" data-slide-to="3"></li>
-					<li data-target="#myCarousel" data-slide-to="4"></li>
-					<li data-target="#myCarousel" data-slide-to="5"></li>
-					<li data-target="#myCarousel" data-slide-to="6"></li>
-					<li data-target="#myCarousel" data-slide-to="7"></li>
-					<li data-target="#myCarousel" data-slide-to="8"></li>
-					
-				</ol>
-				<!-- Wrapper for carousel items -->
-				<div class="carousel-inner">
-					<div class="item active">
-						<img src="resources/images/image1.jpg" alt="First Slide" height="30%" width="100%">
-					</div>
-					<div class="item">
-						<img src="resources/images/image2.jpg" alt="Second Slide" height="30%" width="100%">
-					</div>
-					<div class="item">
-						<img src="resources/images/image3.jpg" alt="Third Slide" height="30%" width="100%">
-					</div>
-					<div class="item">
-						<img src="resources/images/image4.jpg" alt="Fourth Slide" height="30%" width="100%">
-					</div>
-					<div class="item">
-						<img src="resources/images/image5.jpg" alt="Fifth Slide" height="30%" width="100%">
-					</div>
-					<div class="item">
-						<img src="resources/images/image6.jpg" alt="Sixth Slide" height="30%" width="100%">
-					</div>
-					<div class="item">
-						<img src="resources/images/image7.jpg" alt="Seventh Slide" height="30%" width="100%">
-					</div>
-					<div class="item">
-						<img src="resources/images/image8.jpg" alt="Eight Slide" height="30%" width="100%">
-					</div>
-				</div>
-				<!-- Carousel controls -->
-				<a class="carousel-control left" href="#myCarousel"
-					data-slide="prev"> <span
-					class="glyphicon glyphicon-chevron-left"></span>
-				</a> <a class="carousel-control right" href="#myCarousel"
-					data-slide="next"> <span
-					class="glyphicon glyphicon-chevron-right"></span>
-				</a>
-			</div>
-		</div>
+    <div class="item">
+      <img src="resources/images/image1.jpg" alt="Chania">
+    </div>
+
+    <div class="item">
+      <img src="resources/images/image2.jpg" alt="Flower">
+    </div>
+
+    <div class="item">
+      <img src="resources/images/image3.jpg" alt="Flower">
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
 	<table>
 	<tr>
 	<td><div>
