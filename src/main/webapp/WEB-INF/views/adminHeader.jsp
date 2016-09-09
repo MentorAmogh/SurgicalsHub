@@ -75,7 +75,7 @@ text-shadow: #fff 0 -1px 24px, #ff0 0 -2px 30px, #ff8000 0 -10px 20px, red 0 -18
 								</span>
 							</button>
 						</span>
-				
-				</div>
+					</div>
+					</form>
 		
 		</nav>

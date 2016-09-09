@@ -18,7 +18,7 @@
         <beans:property name="password" value="" />
     </beans:bean>
  
- <context:component-scan base-package="com.musichub" />
+ <context:component-scan base-package="com.group" />
     <!-- Hibernate 4 SessionFactory Bean definition -->
  
     <beans:bean id="sessionFactory"  class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
@@ -32,15 +32,12 @@
         </beans:property>
        
        <beans:property name="packagesToScan">
-           <beans:list><beans:value>com.musichub.model</beans:value></beans:list>      
+           <beans:list><beans:value>com.group.model</beans:value></beans:list>      
         </beans:property>
     </beans:bean>
-  
-  
     
     <beans:bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
      <beans:property name="sessionFactory" ref="sessionFactory" />
     </beans:bean>
   
-    <beans:bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver" />
 </beans:beans>

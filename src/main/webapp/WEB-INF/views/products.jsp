@@ -36,13 +36,29 @@
 <style>
 .center {
     margin: auto;
-    width: 40%;
+    width: 100%;
     border: 3px solid #73AD21;
+    position:absolute;
     padding: 20px;
 }
 </style>
-<div class="center">
-<table>
+<style>
+ #map {
+        width: 300px;
+        height: 400px;
+     }
+    </style>
+<table cellspacing="40">
+<tr>
+
+<td>
+<div width="40%">
+<img src="resources/images/1.jpg" width="300px">
+</div>
+</td>
+<td><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+<td>
+<table >
 <tr><th>PId</th><th>PName</th><th>Price</th><th>SuppId</th><th>Image</th></tr>
 Search <input type="text" placeholder="Search products" ng-model="searchText"/>
 <br><br>
@@ -57,8 +73,32 @@ Search <input type="text" placeholder="Search products" ng-model="searchText"/>
                 <td>{{product.suppid}}</td>
                 <td><img src="resources/images/{{product.pid}}.jpg" height="50px" width="50px"/></td>
 </tr>
+<tr>
+<td>
 </table>
 </div>
+</td>
+<td><div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div></td>
+<td><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+<td>
+
+ <h3>Google Maps</h3>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var mapDiv = document.getElementById('map');
+        var map = new google.maps.Map(mapDiv, {
+            center: {lat: 44.540, lng: -78.546},
+            zoom: 8
+        });
+      }
+    </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+    </script>
+</td>
+</tr>
+</table>
 </div>
 </body>
 
