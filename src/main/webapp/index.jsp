@@ -11,19 +11,14 @@
       width: 70%;
       margin: auto;
   }
-
-
-
-
-
-
 .carousel {
 	background: #2f4357;
 	margin-top: 120px;
 }
-
 .carousel .item img {
 	margin: 0 auto; /* Align slide image horizontally center */
+	height: 50%;
+	width:50%;
 }
 
 .bs-example {
@@ -34,7 +29,6 @@
 h1 {
 	color: #fff;
 	font-face: Rio Grande Striped;
-	
 background-color: #333;
 text-shadow: #fff 0 -1px 24px, #ff0 0 -2px 30px, #ff8000 0 -10px 20px, red 0 -18px 40px;
 }
@@ -52,19 +46,19 @@ text-shadow: #fff 0 -1px 24px, #ff0 0 -2px 30px, #ff8000 0 -10px 20px, red 0 -18
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
     <div class="item active">
-      <img src="resources/images/image2.jpg" alt="Chania">
-    </div>
-
-    <div class="item">
       <img src="resources/images/image1.jpg" alt="Chania">
     </div>
 
     <div class="item">
-      <img src="resources/images/image2.jpg" alt="Flower">
+      <img src="resources/images/image2.jpg" alt="Chania">
     </div>
 
     <div class="item">
       <img src="resources/images/image3.jpg" alt="Flower">
+    </div>
+
+    <div class="item">
+      <img src="resources/images/image4.jpg" alt="Flower">
     </div>
   </div>
 

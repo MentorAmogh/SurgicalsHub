@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@ include file="/WEB-INF/views/adminHeader.jsp"%>
 <!--
 Author: W3layouts
 Author URL: http://w3layouts.com
@@ -9,8 +10,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE html>
 <html>
 <head>
-<title>Erudition a Corporate Business Category Flat Bootstrap Responsive Website Template | Contact :: w3layouts</title>
-<!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Erudition Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
@@ -26,82 +25,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <link href='//fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>
 </head>
 	
-<body>
-<!-- header -->
-	<div class="header">
-		<div class="container">
-			<div class="header-top">
-				<div class="header-top-left">
-					<p>Duis aute irure dolor in reprehenderit eu fugiat.</p>
-				</div>
-				<div class="header-top-left1">
-					 <!-- start search-->
-						<div class="search-box">
-							<div id="sb-search" class="sb-search">
-								<form>
-									<input class="sb-search-input" placeholder="Enter your search term..." type="search" name="search" id="search">
-									<input class="sb-search-submit" type="submit" value="">
-									<span class="sb-icon-search"> </span>
-								</form>
-							</div>
-						</div>
-						<!-- search-scripts -->
-						<script src="js/classie.js"></script>
-						<script src="js/uisearch.js"></script>
-							<script>
-								new UISearch( document.getElementById( 'sb-search' ) );
-							</script>
-						<!-- //search-scripts -->
-				</div>
-				<div class="header-top-right">
-					<p>Contact Us <span><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>+0978 789 000</span></p>
-				</div>
-				<div class="clearfix"> </div>
-			</div>
-		</div>
-	</div>
-	<div class="header-logo">
-		<div class="container">
-			<div class="header-nav">
-				<nav class="navbar navbar-default">
-					<!-- Brand and toggle get grouped for better mobile display -->
-					<div class="navbar-header">
-					  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					  </button>
-						<div class="logo">
-							<a class="navbar-brand" href="index.html">Erudition <span>Robotics Innovation Center</span></a>
-						</div>
-					</div>
-
-					<!-- Collect the nav links, forms, and other content for toggling -->
-					<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
-					 <ul class="nav navbar-nav">
-						<li class="hvr-bounce-to-bottom"><a href="index.html">Home</a></li>
-						<li class="hvr-bounce-to-bottom"><a href="services.html">Services</a></li>
-						<li class="hvr-bounce-to-bottom"><a href="gallery.html">Gallery</a></li>
-						<li class="hvr-bounce-to-bottom"><a href="codes.html">Codes</a></li>
-						<li class="hvr-bounce-to-bottom"><a href="blog.html">Blog</a></li>
-						<li class="hvr-bounce-to-bottom active"><a href="contact.html">Contact Us</a></li>
-					  </ul>
-					</div><!-- /.navbar-collapse -->
-				</nav>
-			</div>
-		</div>
-	</div>
-<!-- //header -->
 <!-- contact -->
 	<div class="contact">
 		<div class="container">
 			<h3>Contact Us</h3>
-			<p class="velit">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+			<p class="velit">Surgicals Hub is a pioneer in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
 			<div class="contact-grids">
 				<div class="col-md-5 contact-left">
 					<h4>Address</h4>
-					<p>est eligendi optio cumque nihil impedit quo minus id quod maxime
+					<p>PLot No 150, Gajanan Apartments Panchdeep Nagar Wardha Road
 						<span>26 56D Rescue,US</span></p>
 					<ul>
 						<li>Free Phone :+1 078 4589 2456</li>

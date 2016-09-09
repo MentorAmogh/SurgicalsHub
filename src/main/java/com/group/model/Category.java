@@ -34,5 +34,10 @@ public class Category
 	public void setRcatname(String rcatname) {
 		this.rcatname = rcatname;
 	}
-
+	public Category(String cid, String cname, String cdesc) {
+		super();
+		this.rcatid = cid;
+		this.rcatname = cname;
+		this.rcatdesc = cdesc;
+	}
 }

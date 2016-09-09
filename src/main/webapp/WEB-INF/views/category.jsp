@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<%@ include file="/WEB-INF/views/adminHeader.jsp"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="a"%>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>   
+<%@ include file="/WEB-INF/views/CommonHeader.jsp"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <!DOCTYPE HTML>
 <html>
@@ -40,13 +42,28 @@ top:20px;
 left:200px;
 }
 </style>
+<script>
+  var prod = ${catdata};
+  angular.module('repeatSample', []).controller('categorycontroller', function($scope)
+   {
+                 $scope.products=prod;
+   
+          $scope.sort = function(keyname)
+          {
+              $scope.sortKey = keyname;   //set the sortKey to the param passed
+              $scope.reverse = !$scope.reverse; //if true make it false and vice versa
+          }
+              
+    });
+</script>
+<div  ng-app="repeatSample" ng-controller="categorycontroller">
 <div class="center">
 <!--  border: 3px solid #73AD21; -->
 
 			<table class="box">
 			<tr>  
 				<td>			
-			   <h2> Surgicals Hub </h2></td>
+			   <h2> Surgicals Hub Adding New Category </h2></td>
 			   </tr>
 			   <tr><td>
 					 <form:form  action="showcategory" commandName="category" method="post">
@@ -55,14 +72,31 @@ left:200px;
 					 Description<form:input  path="rcatdesc" placeholder="Description"/><br>
 					<input type="submit" value="Add Category"/>
 					</form:form>
-					
 					 </td>
 					<td>
 					</td>
 					</tr>	
 			</table>
-	</div>	    		
-						
+	</div>	
+	<div class="center">    		
+	<table >
+<tr><th>Cat Id</th><th>Category Name</th><th>Description</th></tr>
+Search <input type="text" placeholder="Search products" ng-model="searchText"/>
+<br><br>
+<tr class="success" ng-repeat="product in products | filter:searchText">
+				<!--       
+                <td><a href="Description?pid={{product.pid}}">{{product.pid}}</a></td>
+				 --> 
+                <td>{{product.rcatid}}</td>
+				
+                <td>{{product.rcatname}}</td>
+                <td>{{product.rcatdesc}}</td>
+                <td><a href="delete?id={{product.rcatid}}">Delete{{product.rcatid}}</td><td></td>
+           </tr>
+<tr>
+<td>
+</table>
+</div>					
 <!--header end here-->
 <div class="copyright">
 	<p>© 2016 Classy Login Form. All rights reserved | Design by  <a href="http://surgicalshub.com/" target="_blank">  SurgicalsHub</a></p>

@@ -24,7 +24,7 @@ public logincontroller()
 	@RequestMapping("/contact")
 	public String showContact()
 	{
-		return "contact";
+		return "contactus";
 	}
 
 	@RequestMapping("/about")

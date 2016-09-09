@@ -9,5 +9,6 @@
 </head>
 
 This is admin page
+data deleted
 </body>
 </html>

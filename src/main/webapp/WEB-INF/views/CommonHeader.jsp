@@ -1,24 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+  <script src="resources/css/fire.css">
+  
+  </script>
  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>   
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 <!-- Optional theme -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-<!-- Latest compiled and minified JavaScript -->
-	<style>
-h1 {
-	color: #fff;
-	font-face: Rio Grande Striped;
-	
-background-color: #333;
-text-shadow: #fff 0 -1px 24px, #ff0 0 -2px 30px, #ff8000 0 -10px 20px, red 0 -18px 40px;
-}
-</style>
-<body bgcolor="bisque">
+<body>
 	<!-- img src="resources/images/header.jpg" should try in corusal-->
-		<h1 align="center"><font face="Rio Grande Striped" size="56">Surgicals Hub</font></h1>
+	<span class="dive" ><font face="Rio Grande Striped" size="56">Surgicals Hub</font></h1></span>
 		&nbsp; Follow us on:
 		 <a href="http://twitter.com/Kyokushinowa" class="btn btn-social-icon btn-twitter">
     		<span class="fa fa-twitter"></span>
@@ -62,5 +54,5 @@ text-shadow: #fff 0 -1px 24px, #ff0 0 -2px 30px, #ff8000 0 -10px 20px, red 0 -18
 						</span>
 				
 				</div>
-		
+				</form>
 		</nav>
