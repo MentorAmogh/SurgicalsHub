@@ -36,7 +36,13 @@ public class CategoryDAO
 		con.close();
 		return data;
 	}
-
+	public Category displayRecord(String catid)
+	{
+		Session con=sessionFactory.openSession();
+		con.beginTransaction();
+		Category cate=(Category)con.get(Category.class,catid);
+		return cate;
+	}
 	public void deleteCategory(@RequestParam("id") String cid)
 	{
 		System.out.println("in cat dao with cid="+cid);
@@ -56,23 +62,17 @@ public class CategoryDAO
 		
        
 	}
-	public Category updateCategory(String cid)
+	public void updateCategory(Category cobj)
 	{
-		System.out.println("in cat dao with cid="+cid);
 		Session con=sessionFactory.openSession();
 		con.beginTransaction();
-		Category employee = (Category)con.get(Category.class, cid); 
-		//added just now at 6:30
-		employee.datatoupdate="true";
-		System.out.println("data is "+employee.datatoupdate);
-		
-		
-		
-		
-      //  con.delete(employee);
-		return employee;   
-		
-       
+		String catid=cobj.getRcatid();
+		Category employee = (Category)con.get(Category.class, catid); 
+		employee.setRcatname(cobj.getRcatname());
+		employee.setRcatdesc(cobj.getRcatdesc());
+		con.update(employee);
+		con.getTransaction().commit();
+		con.close();
 	}
 
 	public void addCategory(Category cat)

@@ -61,7 +61,7 @@ left:200px;
 <div class="center">
 <!--  border: 3px solid #73AD21; -->
 ${check}
- 			<c:if test="${check}">
+ 			<c:if test="${!check}">
 			<table class="box">
 			<tr>  
 				<td>			
@@ -74,18 +74,18 @@ ${check}
 					 Category Name<form:input path="rcatname" placeholder="Category Name"/><br>					
 					 Description<form:input  path="rcatdesc" placeholder="Description"/><br>
 					 Status<form:input  path="datatoupdate" placeholder="Description"/><br>
-					 <a href="update?id=${CatId}">Update</a>
+					 <input type="submit" value="Update"/>
 				 	</form:form>
 				 	</td>
 				 	</table>
 				 	
 			   	 	</c:if>
-			     <c:if test="${!check}">
+			     <c:if test="${check}">
 			     <table class="box">
 			<tr>  
 				<td>			
-			   <h2> Surgicals Hub Updating New Category </h2></td>
-			   </tr>
+			   <h2> Surgicals Hub Adding New Category </h2></td>
+			   		   </tr>
 			   <tr><td>
 			   	 <form:form  action="showcategory" commandName="category" method="post">
 			   	 	 Category Id <form:input  path="rcatid" placeholder="Category Id"/>  <br> 
