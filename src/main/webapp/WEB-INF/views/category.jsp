@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="a"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>   
 <%@ include file="/WEB-INF/views/CommonHeader.jsp"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
@@ -56,25 +56,48 @@ left:200px;
               
     });
 </script>
+
 <div  ng-app="repeatSample" ng-controller="categorycontroller">
 <div class="center">
 <!--  border: 3px solid #73AD21; -->
-
+${check}
+ 			<c:if test="${check}">
 			<table class="box">
 			<tr>  
 				<td>			
-			   <h2> Surgicals Hub Adding New Category </h2></td>
+			   <h2> Surgicals Hub Updating Category </h2></td>
 			   </tr>
 			   <tr><td>
-					 <form:form  action="showcategory" commandName="category" method="post">
-					 Category Id &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input  path="rcatid" placeholder="Category Id"/>  <br> 
+			    
+			   	 <form:form  action="update" commandName="category" method="post">
+			   		 Category Id <form:input  path="rcatid" placeholder="Category Id"/>  <br> 
 					 Category Name<form:input path="rcatname" placeholder="Category Name"/><br>					
 					 Description<form:input  path="rcatdesc" placeholder="Description"/><br>
+					 Status<form:input  path="datatoupdate" placeholder="Description"/><br>
+					 <a href="update?id=${CatId}">Update</a>
+				 	</form:form>
+				 	</td>
+				 	</table>
+				 	
+			   	 	</c:if>
+			     <c:if test="${!check}">
+			     <table class="box">
+			<tr>  
+				<td>			
+			   <h2> Surgicals Hub Updating New Category </h2></td>
+			   </tr>
+			   <tr><td>
+			   	 <form:form  action="showcategory" commandName="category" method="post">
+			   	 	 Category Id <form:input  path="rcatid" placeholder="Category Id"/>  <br> 
+					 Category Name<form:input path="rcatname" placeholder="Category Name"/><br>					
+					 Description<form:input  path="rcatdesc" placeholder="Description"/><br>
+					 Status<form:input  path="datatoupdate" placeholder="Description"/><br>
+					 
 					<input type="submit" value="Add Category"/>
-					</form:form>
-					 </td>
-					<td>
-					</td>
+				 	</form:form>
+			   	 	</c:if>
+			   						 </td>
+					
 					</tr>	
 			</table>
 	</div>	
@@ -91,7 +114,11 @@ Search <input type="text" placeholder="Search products" ng-model="searchText"/>
 				
                 <td>{{product.rcatname}}</td>
                 <td>{{product.rcatdesc}}</td>
+                <td>{{product.datatoupdate}}</td>
+                
+                
                 <td><a href="delete?id={{product.rcatid}}">Delete{{product.rcatid}}</td><td></td>
+                <td><a href="update?id={{product.rcatid}}">Update{{product.rcatid}}</td><td>{{product.datatoupdate}}</td>
            </tr>
 <tr>
 <td>

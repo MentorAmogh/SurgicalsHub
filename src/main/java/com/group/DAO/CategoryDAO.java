@@ -56,7 +56,26 @@ public class CategoryDAO
 		
        
 	}
-public void addCategory(Category cat)
+	public Category updateCategory(String cid)
+	{
+		System.out.println("in cat dao with cid="+cid);
+		Session con=sessionFactory.openSession();
+		con.beginTransaction();
+		Category employee = (Category)con.get(Category.class, cid); 
+		//added just now at 6:30
+		employee.datatoupdate="true";
+		System.out.println("data is "+employee.datatoupdate);
+		
+		
+		
+		
+      //  con.delete(employee);
+		return employee;   
+		
+       
+	}
+
+	public void addCategory(Category cat)
 {
 	
 	Session con=sessionFactory.openSession();

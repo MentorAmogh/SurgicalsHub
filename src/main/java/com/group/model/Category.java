@@ -7,6 +7,7 @@ import javax.persistence.Id;
 @Entity
 public class Category 
 {
+	
 	@Id
 	private String	rcatid;
 	@Column
@@ -39,5 +40,12 @@ public class Category
 		this.rcatid = cid;
 		this.rcatname = cname;
 		this.rcatdesc = cdesc;
+	}
+	public transient String datatoupdate="false";
+	public String getDatatoupdate() {
+		return datatoupdate;
+	}
+	public void setDatatoupdate(String datatoupdate) {
+		this.datatoupdate = datatoupdate;
 	}
 }
