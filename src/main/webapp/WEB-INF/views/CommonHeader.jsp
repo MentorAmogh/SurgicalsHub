@@ -39,7 +39,7 @@
 					<li><a href="products">Products </a></li>
 					<li><a href="contact">Contact Us <span class="glyphicon glyphicon-envelope"></span></a></li>
 					<li><a href="about">About Us </a></li>
-					<li><a href="admin">Manage Category <span class="glyphicon glyphicon-log-out"></span></a></li>
+					<li><a href="admin">Admin Console<span class="glyphicon glyphicon-log-out"></span></a></li>
 					
 				</ul>
 					<form class="navbar-form" role="search">

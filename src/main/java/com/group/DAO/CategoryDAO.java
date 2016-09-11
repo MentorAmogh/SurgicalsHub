@@ -1,10 +1,7 @@
 package com.group.DAO;
-
-
-import java.util.ArrayList;
 import java.util.List;
 
-import javax.transaction.Transaction;
+
 
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
@@ -15,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.google.gson.Gson;
 import com.group.model.Category;
-import com.group.model.Products;
+
 
 
 @Repository

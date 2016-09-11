@@ -16,19 +16,31 @@ import com.group.model.Category;
 @Controller
 public class CategoryController {
 	  @Autowired
-		
 	CategoryDAO catdao;
-	
 	@RequestMapping(value = "/category", method = RequestMethod.GET)
 	public ModelAndView showCategor()
 	{
 		String mydata=catdao.display();
-		
 		ModelAndView mv=new ModelAndView("category","category",new Category());
-		System.out.println("In Get");
 		mv.addObject("catdata",mydata);
 		return mv;
 	}
+	//method to add data to the data
+		@RequestMapping(value = "/showcategory", method = RequestMethod.POST)
+		public ModelAndView getCategory(Category category) 
+		{
+			catdao.addCategory(category);
+			String mydata=catdao.display();
+			ModelAndView mv=new ModelAndView("category","category",new Category());
+			mv.addObject("catdata",mydata);
+			return mv;
+		}
+
+	
+	
+	
+	
+	
 	//Delete the categories
 	@RequestMapping(value = "/delete", method = RequestMethod.GET)
 	public ModelAndView deleteCategor(@RequestParam("id") String cid)
@@ -43,6 +55,11 @@ System.out.println("In delete Category with"+cid);
 		
 		return mv;
 	}
+	
+	
+	
+	
+	
 	//function for updating data
 	@RequestMapping(value = "/update", method = RequestMethod.POST)
 	public ModelAndView updateCommit(Category upcat)
@@ -64,15 +81,5 @@ System.out.println("In delete Category with"+cid);
 		mv.addObject("check",false);
 		return mv;
 	}
-	//method to add data to the data
-	@RequestMapping(value = "/showcategory", method = RequestMethod.POST)
-	public ModelAndView getCategory(Category category) 
-	{
-		catdao.addCategory(category);
-		String mydata=catdao.display();
-		ModelAndView mv=new ModelAndView("category","category",new Category());
-		mv.addObject("catdata",mydata);
-		return mv;
-	}
-
+	
 }
