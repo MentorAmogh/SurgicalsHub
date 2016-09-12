@@ -1,34 +1,43 @@
 package com.group.DAO;
 import java.util.*;
 
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import com.google.gson.Gson;
 import com.group.model.*;
 
 @Repository
 public class productsDAO 
 {
-	
+	@Autowired
+	 SessionFactory	sessionFactory;
 List<Products> pobj;
-	
-public List<Products> display()
+
+public String display()
 {
-	pobj=new ArrayList<Products>();
-	Products p1=new Products("P001","Parle Ji","Biscuit","S001",10);
-	Products p2=new Products("P002","Marie","Biscuit","S002",15);
-	Products p3=new Products("P003","Little Hearts","Biscuit","S003",17);
-	Products p4=new Products("P004","Monaco","Biscuit","S004",19);
-	Products p5=new Products("P005","Britania","Biscuit","S005",21);
-	Products p6=new Products("P006","Dark Fantasy","Biscuit","S006",50);
-	Products p7=new Products("P007","Hide And Sick","Biscuit","S007",20);
-	pobj.add(p1);
-	pobj.add(p2);
-	pobj.add(p3);
-	pobj.add(p4);
-	pobj.add(p5);
-	pobj.add(p6);
-	pobj.add(p7);
-	
-	return pobj;
+	Session con=sessionFactory.openSession();
+	con.beginTransaction();
+	List li=con.createQuery(" from Products").list();
+		Gson gobj=new Gson();
+		String proddata=gobj.toJson(li);
+	con.getTransaction().commit();
+	con.close();
+	return proddata;
 }
+
+
+public void addCategory(Products prodcat)
+{
+	
+	Session con=sessionFactory.openSession();
+	con.beginTransaction();
+	con.save(prodcat);
+	con.getTransaction().commit();
+	con.close();
+	
+}
+
 }

@@ -6,21 +6,41 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
+
 import com.google.gson.Gson;
+import com.group.DAO.CategoryDAO;
 import com.group.DAO.productsDAO;
+import com.group.model.Category;
 import com.group.model.Products;
 
 @Controller
 public class productcontroller {
-	  @Autowired
-		productsDAO pdao;
-		@RequestMapping("/products")
-		public String showProducts(Model M)
+	 @Autowired
+		productsDAO prodDAO;
+	 @Autowired
+	 	CategoryDAO catDAO;
+		@RequestMapping(value = "/products", method = RequestMethod.GET)
+		public ModelAndView showProducts()
 		{
-			Gson  gsonstring =new Gson();
-			List<Products> robj=pdao.display();
-			String prodlist=gsonstring.toJson(robj);
-			M.addAttribute("proddata", prodlist);
-			return "products";
+			String catids=catDAO.displayCatId();
+			String proddata=prodDAO.display();
+			ModelAndView mv=new ModelAndView("products","products",new Products());
+			mv.addObject("catidretrieved",catids);
+			mv.addObject("proddata",proddata);
+			return mv;
 		}
-	}
+	
+
+//Adding product data
+@RequestMapping(value = "/addproducts", method = RequestMethod.POST)
+public ModelAndView getCategory(Products newproduct) 
+{
+	prodDAO.addCategory(newproduct);
+	String mydata=prodDAO.display();
+	ModelAndView mv=new ModelAndView("products","products",new Products());
+	mv.addObject("proddata",mydata);
+	return mv;
+}
+}

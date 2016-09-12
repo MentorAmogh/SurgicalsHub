@@ -6,7 +6,7 @@ import javax.persistence.Id;
 
 @Entity
 public class Supplier {
-	@Id
+	@Id 
 	private String suppid;
 	@Column
 	private String	suppname;

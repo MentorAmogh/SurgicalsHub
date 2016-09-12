@@ -1,59 +1,67 @@
 package com.group.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+//original products data
+@Entity
 public class Products {
-	public String getPid() {
-		return pid;
+	@Id 
+	private String prodid;
+	@Column
+	private String prodname;
+	@Column
+	private String proddesc;
+	@Column
+	private String suppid;
+	@Column
+	private String catid;
+	@Column
+	private int prodprice;
+	@Column
+	private int prodstock;
+	
+	public String getProdid() {
+		return prodid;
 	}
-
-	public void setPid(String pid) {
-		this.pid = pid;
+	public void setProdid(String prodid) {
+		this.prodid = prodid;
 	}
-
-	public String getPname() {
-		return pname;
+	public String getProdname() {
+		return prodname;
 	}
-
-	public void setPname(String pname) {
-		this.pname = pname;
+	public void setProdname(String prodname) {
+		this.prodname = prodname;
 	}
-
-	public String getDesc() {
-		return desc;
+	public String getProddesc() {
+		return proddesc;
 	}
-
-	public void setDesc(String desc) {
-		this.desc = desc;
+	public void setProddesc(String proddesc) {
+		this.proddesc = proddesc;
 	}
-
 	public String getSuppid() {
 		return suppid;
 	}
-
 	public void setSuppid(String suppid) {
 		this.suppid = suppid;
 	}
-
-	public int getPrice() {
-		return price;
+	public String getCatid() {
+		return catid;
 	}
-
-	public void setPrice(int price) {
-		this.price = price;
+	public void setCatid(String catid) {
+		this.catid = catid;
 	}
-
-	private String pid;
-	private String pname;
-	private String desc;
-	private String suppid;
-	private int price;
-	
-	public Products(String pid, String pname, String desc, String suppId, int price) {
-		super();
-		this.pid = pid;
-		this.pname = pname;
-		this.desc = desc;
-		this.suppid = suppId;
-		this.price = price;
+	public int getProdprice() {
+		return prodprice;
 	}
-
+	public void setProdprice(int prodprice) {
+		this.prodprice = prodprice;
+	}
+	public int getProdstock() {
+		return prodstock;
+	}
+	public void setProdstock(int prodstock) {
+		this.prodstock = prodstock;
+	}
 }

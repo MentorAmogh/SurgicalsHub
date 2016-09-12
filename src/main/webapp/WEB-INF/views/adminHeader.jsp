@@ -57,9 +57,9 @@ text-shadow: #fff 0 -1px 24px, #ff0 0 -2px 30px, #ff8000 0 -10px 20px, red 0 -18
 				</div>
 				<ul class="nav navbar-nav">
 					<li class="active"><a href="#">Home <span class="glyphicon glyphicon-home"></span></a></li>
-					<li><a href="supplier">Add Supplier <span class="glyphicon glyphicon-log-in"></span></a></li>
-					<li><a href="register">Add Product <span class="glyphicon glyphicon-registration-mark"></span></a></li>
-					<li><a href="products">Change Role </a></li>
+					<li><a href="supplier">Supplier <span class="glyphicon glyphicon-log-in"></span></a></li>
+					<li><a href="products">Product <span class="glyphicon glyphicon-registration-mark"></span></a></li>
+					<li><a href="register">Change Role </a></li>
 					<li><a href="contact">Update Stock<span class="glyphicon glyphicon-envelope"></span></a></li>
 					<li><a href="deletecategory">Delete Category </a></li>
 					<li><a href="category">Add Category <span class="glyphicon glyphicon-log-out"></span></a></li>

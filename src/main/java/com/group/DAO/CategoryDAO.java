@@ -21,6 +21,17 @@ public class CategoryDAO
 	@Autowired
 	 SessionFactory	sessionFactory;
 	//List<Category> pobj;
+	public 	String displayCatId()
+	{
+		Session con=sessionFactory.openSession();
+		con.beginTransaction();
+		List id_li=con.createQuery(" from Category").list();
+			Gson gobj=new Gson();
+			String catids=gobj.toJson(id_li);
+		con.getTransaction().commit();
+		con.close();
+		return catids;
+	}
 	public String display()
 	{
 		Session con=sessionFactory.openSession();

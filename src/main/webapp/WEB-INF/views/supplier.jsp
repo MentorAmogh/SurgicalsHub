@@ -63,7 +63,7 @@ left:200px;
 <div class="center">
 <!--  border: 3px solid #73AD21; -->
 ${check}
- 			<c:if test="${check}">
+ 			<c:if test="${!check}">
 			<table class="box">
 			<tr>  
 				<td>			
@@ -84,7 +84,7 @@ ${check}
 				 	</table>
 				 	
 			   	 	</c:if>
-			     <c:if test="${!check}">
+			     <c:if test="${check}">
 			     <table class="box">
 			<tr>  
 				<td>			
