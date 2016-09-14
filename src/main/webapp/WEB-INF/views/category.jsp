@@ -2,7 +2,7 @@
     pageEncoding="ISO-8859-1"%>
     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>   
-<%@ include file="/WEB-INF/views/CommonHeader.jsp"%>
+<%@ include file="/WEB-INF/views/adminHeader.jsp"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <!DOCTYPE HTML>
 <html>
@@ -74,7 +74,7 @@ ${check}
 					 Category Name<form:input path="rcatname" placeholder="Category Name"/><br>					
 					 Description<form:input  path="rcatdesc" placeholder="Description"/><br>
 					 Status<form:input  path="datatoupdate" placeholder="Description"/><br>
-					 <input type="submit" value="Update"/>
+					 <input type="submit" value="Update"/><input type="submit" value="Add Category"/>
 				 	</form:form>
 				 	</td>
 				 	</table>

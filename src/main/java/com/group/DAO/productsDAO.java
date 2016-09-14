@@ -29,7 +29,7 @@ public String display()
 }
 
 
-public void addCategory(Products prodcat)
+public void addProducts(Products prodcat)
 {
 	
 	Session con=sessionFactory.openSession();

@@ -4,6 +4,8 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
+import org.springframework.web.multipart.MultipartFile;
+
 //original products data
 @Entity
 public class Products {
@@ -21,7 +23,15 @@ public class Products {
 	private int prodprice;
 	@Column
 	private int prodstock;
+private transient MultipartFile  pimage;
 	
+	
+	public MultipartFile getPimage() {
+	return pimage;
+}
+public void setPimage(MultipartFile pimage) {
+	this.pimage = pimage;
+}
 	public String getProdid() {
 		return prodid;
 	}

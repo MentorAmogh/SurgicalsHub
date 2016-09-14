@@ -17,52 +17,48 @@
 <link href='//fonts.googleapis.com/css?family=Roboto+Condensed:400,700' rel='stylesheet' type='text/css'>
 </head>
 
-<style>
-.center {
-    margin: auto;
-    width: 80%;
-    padding: 20px;
-}
-.centert {
-    margin: auto;
-    width: 50%;
-    border: 2px solid #73AD21;
-    padding: 20px;
-}
-.box
-{
-width:400px;
-height=400px;
-position:relative;
-top:20px;
-left:200px;
-}
-</style>
-<div class="center">
-<!--  border: 3px solid #73AD21; -->
-
-			<table class="box">
-			<tr>  
-				<td>			
-			   <h2> Surgicals Hub </h2></td>
-			   </tr>
-			   <tr><td>
-					 <form:form action="#" method="get" commandName="Register">
-					 Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input  path="rname" placeholder="User Name"/>  <br> 
-					 Id<form:input  path="rid" placeholder="User Id"/><br>					
+<body>
+<div>
+	<table>
+		<tr>
+		<td>
+			<table >
+				
+			   <tr>
+			   	<td>
+			
+			   		 <form:form action="addUser" method="get" commandName="Register">
+					 Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input  path="Customername" placeholder="User Name"/>  <br> 
+					 Id<form:input  path="userid" placeholder="User Id"/><br>					
 					 Password<form:password path="rpassword" placeholder="Password" required="true"/><br>
-					ReEnter Password<form:password path="repassword" placeholder="Re-Password" required="true"/><br>
-					Email<form:input type="email"  path="remail" placeholder="Email" required="required"/><br>
-					Address<form:input  path="raddress" placeholder="Address"/><br>
-					<input type="submit" value="Register"/>
+					 Re-Enter Password<form:password path="repassword" placeholder="Re-Password" required="true"/><br>
+					 Mobile<form:input type="mobile"  path="remail" placeholder="Email" required="required"/><br>
+					 Email<form:input type="email"  path="remail" placeholder="Email" required="required"/><br>
+					 Address<form:input  path="address" placeholder="Address"/><br>
+					<input type="submit" value="Add User"/>
 					</form:form>
+		
+				</td>
 					</td>
 					<td>
-					</td>
-					</tr>	
-			</table>
-	</div>	    		
-						
+			
+	
+
+
+
+				</table>
+				<table>
+				<tr>
+				<td><img src="resources/images/image9.jpg" height="40%" width="50%"/></td>
+				</tr>	
+			
+				</table>
+		</td>
+		</tr>	
+	</table>
+				
+</div>
+
 <!--header end here-->
 <div class="copyright">
 	<p>© 2016 Classy Login Form. All rights reserved | Design by  <a href="http://surgicalshub.com/" target="_blank">  SurgicalsHub</a></p>

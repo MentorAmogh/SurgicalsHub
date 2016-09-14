@@ -1,10 +1,54 @@
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <%@ include file="/WEB-INF/views/CommonHeader.jsp"%>
- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>   
- <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<!DOCTYPE HTML>
+<html>
+<head>
+<link rel="shortcut icon" type="image/x-icon" href="resources/images/bell.ico"/>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<meta name="keywords" content="Classy Login form Responsive, Login form web template, Sign up Web Templates, Flat Web Templates, Login signup Responsive web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<!-- Custom Theme files -->
+<link href="resources/css/clastyle.css" rel="stylesheet" type="text/css" media="all"/>
+<!-- for-mobile-apps -->
+<!-- //for-mobile-apps -->
+<!--Google Fonts-->
+<link href='//fonts.googleapis.com/css?family=Roboto+Condensed:400,700' rel='stylesheet' type='text/css'>
+<title>Surgicals Hub</title>
+</head>
+
+<style>
+.center {
+    margin: auto;
+    width: 80%;
+    padding: 20px;
+}
+.centert {
+    margin: auto;
+    width: 50%;
+    border: 2px solid #73AD21;
+    padding: 20px;
+}
+.box
+{
+width:400px;
+height=400px;
+position:relative;
+top:20px;
+left:200px;
+}
+</style>
   <style>
   .carousel-inner > .item > img,
   .carousel-inner > .item > a > img {
@@ -13,7 +57,7 @@
   }
 .carousel {
 	background: #2f4357;
-	margin-top: 120px;
+	margin-top: 20px;
 }
 .carousel .item img {
 	margin: 0 auto; /* Align slide image horizontally center */
@@ -72,79 +116,12 @@ text-shadow: #fff 0 -1px 24px, #ff0 0 -2px 30px, #ff8000 0 -10px 20px, red 0 -18
     <span class="sr-only">Next</span>
   </a>
 </div>
-	<table>
-	<tr>
-	<td><div>
-		<figure class="figure">
-  <img src="resources/images/ethicon.png" height="40%" width="40%" class="figure-img img-fluid img-rounded" alt="A generic square placeholder image with rounded corners in a figure.">
-  <figcaption class="figure-caption text-xs-right">A caption for the above image.</figcaption>
-</figure>
-		
-		</div></td>
-		<td><div>
-		<figure class="figure">
-  <img src="resources/images/BRAUN.jpg" height="40%" width="40%" class="figure-img img-fluid img-rounded" alt="A generic square placeholder image with rounded corners in a figure.">
-  <figcaption class="figure-caption text-xs-right">A caption for the above image.</figcaption>
-</figure>
-		
-		</div></td>
-		<td><div>
-		<figure class="figure">
-  <img src="resources/images/novo.png" height="40%" width="40%" class="figure-img img-fluid img-rounded" alt="A generic square placeholder image with rounded corners in a figure.">
-  <figcaption class="figure-caption text-xs-right">A caption for the above image.</figcaption>
-</figure>
-		
-		</div></td>
-		
-			</tr>
-	<tr>
-	<td><div>
-		<figure class="figure">
-  <img src="resources/images/JMS.png" height="40%" width="40%" class="figure-img img-fluid img-rounded" alt="A generic square placeholder image with rounded corners in a figure.">
-  <figcaption class="figure-caption text-xs-right">A caption for the above image.</figcaption>
-</figure>
-		
-		</div></td>
-		<td><div>
-		<figure class="figure">
-  <img src="resources/images/larsmedi.jpg" height="40%" width="40%" class="figure-img img-fluid img-rounded" alt="A generic square placeholder image with rounded corners in a figure.">
-  <figcaption class="figure-caption text-xs-right">A caption for the above image.</figcaption>
-</figure>
-		
-		</div></td>
-		<td><div>
-		<figure class="figure">
-  <img src="resources/images/nulife.jpg" height="40%" width="40%" class="figure-img img-fluid img-rounded" alt="A generic square placeholder image with rounded corners in a figure.">
-  <figcaption class="figure-caption text-xs-right">A caption for the above image.</figcaption>
-</figure>
-		
-		</div></td>
-		
-			</tr>
-	<tr>
-	<td><div>
-		<figure class="figure">
-  <img src="resources/images/polymed.png" height="20%" width="40%" class="figure-img img-fluid img-rounded" alt="A generic square placeholder image with rounded corners in a figure.">
-  <figcaption class="figure-caption text-xs-right">A caption for the above image.</figcaption>
-</figure>
-		
-		</div></td>
-		<td><div>
-		<figure class="figure">
-  <img src="resources/images/romsons.png" height="20%" width="40%" class="figure-img img-fluid img-rounded" alt="A generic square placeholder image with rounded corners in a figure.">
-  <figcaption class="figure-caption text-xs-right">A caption for the above image.</figcaption>
-</figure>
-		
-		</div></td>
-		<td><div>
-		<figure class="figure">
-  <img src="resources/images/jandj.jpg" height="20%" width="40%" class="figure-img img-fluid img-rounded" alt="A generic square placeholder image with rounded corners in a figure.">
-  <figcaption class="figure-caption text-xs-right">A caption for the above image.</figcaption>
-</figure>
-		
-		</div></td>
-		
-			</tr>
-	
-	</table>		
+	<center>	
+  <img src="resources/images/ethicon.jpg" height="120" width="120"  class="img-circle" alt="A generic square placeholder image with rounded corners in a figure.">
+  <img src="resources/images/image_7.jpg" height="120" width="120"  class="img-circle"/>
+  <img src="resources/images/BRAUN.jpg" height="120" width="120"  class="img-circle"/>		
+  <img src="resources/images/jandj.jpg" height="120" width="120"  class="img-circle"/>		
+  <img src="resources/images/JMS.jpg" height="120" width="120"  class="img-circle"/>		
+  <img src="resources/images/meril.jpg" height="120" width="120" class="img-circle"/>		
+</center>
 </body>

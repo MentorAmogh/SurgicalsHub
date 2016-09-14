@@ -1,68 +1,17 @@
-<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
-<jsp:include page="CommonHeader.jsp"/>
-<!DOCTYPE HTML>
-<html>
-<head>
-<title></title>
-<link href="resources/css/login.css" rel="stylesheet" type="text/css" media="all" />
-<link href='http://fonts.googleapis.com/css?family=Rokkitt' rel='stylesheet' type='text/css'>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
-</head>
-<body>
 
-<table>
-<tr>
-<td>
-<div class="wrap">
-<!-- strat-contact-form -->	
-<div class="contact-form">
-<!-- start-form -->
-<form:form action="#" method="get" commandName="login">
-	
-		<font bsize="16">Login Into Your Account</font>
-	    <ul>
-	        <li>
-				<form:input type="text" path="UserId" placeholder="abcd@gmail.com"/>
-			      
-	        
-	        
-	            <img src="resources/images/contact.png" alt="errrrrrrrr" height="30" width="40">
-	        </li>
-	        <li>
-	            <form:input type="password" path="UPassword" placeholder="password"/>
-	               
-	            <nobr></nobr>
-	            <img src="resources/images/lock.png" alt="errrrrrrrr" height="30" width="40">
-	        </li>
-         </ul>
-       	 	<input type="submit" value="Sign In"/>
-      <div class="forgot">
-			<a href="#">forgot password?</a>
-		</div>	
-		<div class="clear"></div>	
-	</form:form>
-<!-- end-form -->
-<!-- start-account -->
-<div class="account">
-	<h2><a href="#">Don' have an account? Sign Up!</a></h2>
-    <div class="span"><a href="#"><img src="resources/images/facebook.png" alt="errrrrrrr" height="20" width="20"/><i>Sign In with Facebook</i><div class="clear"></div></a></div>	
-    <div class="span1"><a href="#"><img src="resources/images/twitter.png" alt="errrrrrrr" height="20" width="20"/><i>Sign In with Twitter</i><div class="clear"></div></a></div>
-    <div class="span2"><a href="#"><img src="resources/images/gplus.png" alt="errrrr" height="20" width="20"/><i>Sign In with Google+</i><div class="clear"></div></a></div>
-</div>	
-<!-- end-account -->
-<div class="clear"></div>	
-</div>
-<!-- end-contact-form -->
-</div>
-</td>
-<td>
-
-</td>
-
-</tr>
-</table>
- 
-</body>
-</html>
+<form action="perform_login" method="post">
+				<h1>Login Form</h1>
+				<div>
+					<input type="text" placeholder="Username" required id="username" name="username" 
+						pattern=".{5,10}" title="minimum length for username is 5"/>
+				</div>
+				<div>
+					<input type="password" placeholder="Password" required id="password" name="password" 
+					title="Enter Valid credentials"/>
+				</div>
+				<div>
+					<input type="submit" value="Log in" /> <a href="#">Lost your
+						password?</a> <a href="Register">Register</a>
+				</div>
+				
+			</form>
