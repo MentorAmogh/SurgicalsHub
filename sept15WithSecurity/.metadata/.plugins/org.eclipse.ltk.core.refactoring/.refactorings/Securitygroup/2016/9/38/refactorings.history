@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Securitygroup/src/main/webapp/WEB-INF/SecurityImpl.xml&apos; to &apos;SpringIMPL.xml&apos;" description="Rename resource &apos;SecurityImpl.xml&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/webapp/WEB-INF/SecurityImpl.xml" name="SpringIMPL.xml" stamp="1473919996506" updateReferences="true"/>
+</session>

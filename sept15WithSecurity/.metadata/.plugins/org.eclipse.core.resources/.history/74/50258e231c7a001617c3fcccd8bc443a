@@ -1,0 +1,5 @@
+package com.group.DAO;
+
+public class UserDetails {
+
+}

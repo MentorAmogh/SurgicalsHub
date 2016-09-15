@@ -1,0 +1,14 @@
+package com.group.DAO;
+
+import org.springframework.stereotype.Repository;
+
+@Repository
+public class supplierDAO {
+	public String displayALL()
+	{
+		
+		return "success";
+		
+	}
+
+}

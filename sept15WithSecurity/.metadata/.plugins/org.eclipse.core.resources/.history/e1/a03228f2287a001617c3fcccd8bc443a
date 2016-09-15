@@ -1,0 +1,9 @@
+package com.group.DAO;
+
+public class LoginDAO {
+	public UserDetails get(String passedid)
+	{
+		
+	}
+
+}

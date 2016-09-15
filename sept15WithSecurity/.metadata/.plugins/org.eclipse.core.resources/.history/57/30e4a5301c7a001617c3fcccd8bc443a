@@ -1,0 +1,10 @@
+package com.group.DAO;
+
+public class UserDetails {
+	private String userid ,
+	private String Customername,
+	private String Mobile,
+	private String Email,
+	private String Address
+
+}

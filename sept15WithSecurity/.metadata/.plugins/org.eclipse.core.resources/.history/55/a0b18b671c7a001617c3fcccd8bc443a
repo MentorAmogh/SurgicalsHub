@@ -1,0 +1,159 @@
+package com.group.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.google.gson.Gson;
+import com.group.DAO.productsDAO;
+import com.group.model.Login;
+import com.group.model.Products;
+import com.group.model.Register;
+
+@Controller
+public class logincontroller {
+public logincontroller()
+{
+//	System.out.println("In controller");
+}
+
+
+
+
+
+
+
+
+
+@Autowired
+UserDetails user;
+
+@Autowired
+LoginDAO logindao;
+
+@SuppressWarnings("unchecked")
+	@RequestMapping(value = "/login_session_attributes")
+	public String login_session_attributes(HttpSession session,Model model) {
+		String userid = SecurityContextHolder.getContext().getAuthentication().getName();
+		UserDetails  cname = logindao.get(userid);
+		session.setAttribute("userId", user.getUserId());
+		session.setAttribute("name", user.getName());
+		session.setAttribute("LoggedIn", "true");
+
+		Collection<GrantedAuthority> authorities = (Collection<GrantedAuthority>) SecurityContextHolder.getContext()	.getAuthentication().getAuthorities();
+		String page="";
+		String role="ROLE_USER";
+		for (GrantedAuthority authority : authorities) 
+		{
+		  
+		     if (authority.getAuthority().equals(role)) 
+		     {
+		    	 session.setAttribute("UserLoggedIn", "true");
+			 page="/addToCart";
+		    	 session.setAttribute("cartsize",cartDAO.cartsize((int)session.getAttribute("userId")));
+		     }
+		     else 
+		     {
+		    	 session.setAttribute("Administrator", "true");
+			
+		    }
+		}
+		return page;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@RequestMapping("/dispproducts")
+public String showProdcust()
+{
+	return "displayProducts";
+}
+
+@RequestMapping("/home")
+public String showHome()
+{
+	return "index";
+}
+	@RequestMapping("/contact")
+	public String showContact()
+	{
+		return "contactus";
+	}
+
+	@RequestMapping("/about")
+	public String showAbout()
+	{
+		return "about";
+	}
+	@RequestMapping("/CommonHeader")
+	public String showHeader()
+	{
+		return "CommonHeader";
+	}
+	@RequestMapping("/admin")
+	public String showAdmin()
+	{
+		return "admin";
+	}
+	@RequestMapping(value = "/login", method = RequestMethod.GET)
+	public ModelAndView showlogin() {
+		 return new ModelAndView("login", "login", new Login());
+	}
+	
+	  @RequestMapping(value = "/register", method = RequestMethod.GET)
+	   public ModelAndView showregister() {
+	      return new ModelAndView("register", "Register", new Register());
+	  }
+	/*
+	@Autowired
+	productsDAO pdao;
+	@RequestMapping("/products")
+	public ModelAndView showProducts()
+	{
+		Gson  gsonstring =new Gson();
+		List<Products> robj=pdao.display();
+	//	System.out.println(robj);
+		return new ModelAndView("products","rob",robj);
+	}
+	
+	  @Autowired
+		productsDAO pdao;
+		@RequestMapping("/products")
+		public String showProducts(Model M)
+		{
+			Gson  gsonstring =new Gson();
+			List<Products> robj=pdao.display();
+			String prodlist=gsonstring.toJson(robj);
+			M.addAttribute("proddata", prodlist);
+			return "products";
+		//	System.out.println(robj);
+			//return new ModelAndView("products","rob",robj);
+		}
+	
+	*/
+}

@@ -1,0 +1,9 @@
+@CHARSET "ISO-8859-1";
+dive 
+{
+	width: 998px;	margin-right: auto;
+	margin-left: auto;
+	border: 1px solid #424242;
+	background: black url(http://www.midwinter-dg.com/blog_demos/css-text-shadows/images/fire.jpg) center 0;
+	margin-bottom: 10px;
+}

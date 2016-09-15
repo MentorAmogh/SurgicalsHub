@@ -1,0 +1,10 @@
+package com.group.model;
+public class UserCredentials {
+private String UserId;
+private String UPassword;
+private String role="User";
+private boolean status =true;
+
+}
+
+

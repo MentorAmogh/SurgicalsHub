@@ -1,0 +1,27 @@
+package com.group.model;
+
+public class Category {
+private String	rcatid;
+	private String rcatname;
+	private String rcatdesc;
+	
+	public String getRcatid() {
+		return rcatid;
+	}
+	public void setRcatid(String rcatid) {
+		this.rcatid = rcatid;
+	}
+	public String getRcatname() {
+		return rcatname;
+	}
+	public void setRcatname(String rcatname) {
+		this.rcatname = rcatname;
+	}
+	public String getRcatdesc() {
+		return rcatdesc;
+	}
+	public void setRcatdesc(String rcatdesc) {
+		this.rcatdesc = rcatdesc;
+	}
+
+}

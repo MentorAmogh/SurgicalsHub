@@ -1,0 +1,76 @@
+package com.group.DAO;
+
+import java.util.List;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.google.gson.Gson;
+import com.group.model.Supplier;
+import com.group.model.UserDetails;
+
+@Repository
+public class UserDetailsDAO {
+	@Autowired
+	 SessionFactory	sessionFactory;
+	public String displayUsers()
+	{
+		
+		Session con=sessionFactory.openSession();
+		con.beginTransaction();
+		List li=con.createQuery(" from UserDetails").list();
+			Gson gobj=new Gson();
+			String data=gobj.toJson(li);
+			System.out.println(data);
+		con.getTransaction().commit();
+		con.close();
+		return data;
+	}
+	public void addUsers(UserDetails adduser)
+	{
+	
+	Session con=sessionFactory.openSession();
+	con.beginTransaction();
+	con.save(adduser);
+	con.getTransaction().commit();
+	con.close();
+	
+}
+	public void deleteUser(@RequestParam("id") String uid)
+	{
+		System.out.println("in cat dao with cid="+uid);
+		Session con=sessionFactory.openSession();
+		con.beginTransaction();
+		UserDetails user = (UserDetails)con.get(UserDetails.class, uid); 
+       con.delete(user); 
+       con.getTransaction().commit();
+  	}
+	public void updateUser(UserDetails uobj)
+	{
+		Session con=sessionFactory.openSession();
+		con.beginTransaction();
+		String suppid=uobj.getSuppid();
+		Supplier supplr = (UserDetails)con.get(UserDetails.class, uid); 
+		supplr.setSuppaddr(sobj.getSuppaddr());
+		supplr.setSuppemail(sobj.getSuppemail());
+		con.update(supplr);
+		con.getTransaction().commit();
+		con.close();
+	}
+	
+	public Supplier displayRecord(String suppid)
+	{
+		Session con=sessionFactory.openSession();
+		con.beginTransaction();
+		Supplier cate=(Supplier)con.get(Supplier.class,suppid);
+		return cate;
+	}
+	
+	
+	
+	
+	
+}

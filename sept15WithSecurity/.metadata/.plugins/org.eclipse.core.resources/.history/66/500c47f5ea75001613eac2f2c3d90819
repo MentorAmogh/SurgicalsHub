@@ -1,0 +1,7 @@
+package com.group.model;
+
+public class Category {
+private String	rcatid
+	private String rcatname
+	private Stringrcatdesc
+}

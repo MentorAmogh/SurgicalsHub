@@ -1,0 +1,45 @@
+1473057039196	Rename resource 'discriptor.xml'
+1473058227949	Rename resource 'dispatcher-servelet.xml'
+1473098177208	Delete elements
+1473098999447	Move 'css' to 'resources'
+1473099002876	Move 'fonts' to 'resources'
+1473099005119	Move 'images' to 'resources'
+1473099006977	Move 'js' to 'resources'
+1473100528169	Rename resource 'Common-Footer.jsp'
+1473100534949	Rename resource 'Common-Header.jsp'
+1473104599323	Rename resource 'Login.jsp'
+1473116414081	Rename resource 'Register.jsp'
+1473136428322	Rename package 'com.DAO'
+1473207407710	Copy file
+1473216790262	Rename resource 'products.jsp'
+1473216798595	Rename resource 'products_ori.jsp'
+1473217718198	Delete element
+1473284514307	Rename resource 'image8.jpg'
+1473291099884	Delete element
+1473291107853	Delete element
+1473291113317	Delete element
+1473291123554	Delete element
+1473291130018	Delete element
+1473294209699	Rename resource 'ProductDescription.jsp'
+1473302550848	Copy file
+1473302564901	Rename resource 'CommonHeader2.jsp'
+1473303673744	Copy file
+1473377288046	Copy file
+1473378204340	Delete element
+1473378565827	Delete element
+1473383954248	Delete element
+1473386725040	Delete element
+1473386812185	Delete element
+1473386886753	Delete element
+1473389080936	Delete element
+1473392326935	Rename type 'DeleteCategoryDao'
+1473393621497	Copy compilation unit
+1473441776207	Delete element
+1473441785752	Delete element
+1473441793125	Delete element
+1473441812910	Delete element
+1473475830675	Copy file
+1473476322727	Delete element
+1473538685779	Rename resource 'Supplier.jsp'
+1473538811080	Rename type 'suppliercontroller'
+1473544030319	Delete element

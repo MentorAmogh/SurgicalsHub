@@ -1,0 +1,103 @@
+package com.group.controller;
+
+import java.io.BufferedOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
+import com.google.gson.Gson;
+import com.group.DAO.CategoryDAO;
+import com.group.DAO.productsDAO;
+import com.group.DAO.supplierDAO;
+import com.group.model.Category;
+import com.group.model.Products;
+
+@Controller
+public class productcontroller {
+	 @Autowired
+		productsDAO prodDAO;
+	 @Autowired
+	 	CategoryDAO catDAO;
+	 @Autowired
+	 	supplierDAO suppDAO;
+	 
+		@RequestMapping(value = "/products", method = RequestMethod.GET)
+		public ModelAndView showProducts()
+		{
+			String suppids=suppDAO.displayALL();
+			String catids=catDAO.displayCatId();
+			String proddata=prodDAO.display();
+			ModelAndView mv=new ModelAndView("products","products",new Products());
+			mv.addObject("suppidretrieved",suppids);
+			mv.addObject("catidretrieved",catids);
+			mv.addObject("proddata",proddata);
+			return mv;
+		}
+		//Adding product data
+		@RequestMapping(value = "/addproducts", method = RequestMethod.POST)
+		public String addProduct(@ModelAttribute("prdt")Products newproduct, HttpServletRequest request,RedirectAttributes attributes) 
+		{
+			prodDAO.addCategory(newproduct);
+			String path="C:\\JavaDTBatch5\\MusicHub\\src\\main\\webapp\\resources\\images\\";
+			path=path+String.valueOf(newproduct.getProdid())+".jpg";
+			File f=new File(path);
+		
+			MultipartFile filedet=newproduct.getPimage();
+			
+			if(!filedet.isEmpty())
+			{
+				try
+				{
+				  byte[] bytes=filedet.getBytes();
+				  System.out.println(bytes.length);
+				  FileOutputStream fos=new FileOutputStream(f);
+	              			BufferedOutputStream bs=new BufferedOutputStream(fos);
+	              			bs.write(bytes);
+	              			bs.close();
+	             			 System.out.println("File Uploaded Successfully");
+				}
+				catch(Exception e)
+				{
+					System.out.println("Exception Arised"+e);
+				}
+			}
+			else
+			{
+				System.out.println("File is Empty not Uploaded");
+				
+			}
+			
+			
+			return "Products";
+			/*
+			String mydata=prodDAO.display();
+			ModelAndView mv=new ModelAndView("products","products",new Products());
+			mv.addObject("proddata",mydata);
+			return mv;
+			*/
+		}
+/*
+//Adding product data
+@RequestMapping(value = "/addproducts", method = RequestMethod.POST)
+public ModelAndView getCategory(Products newproduct) 
+{
+	prodDAO.addCategory(newproduct);
+	String mydata=prodDAO.display();
+	ModelAndView mv=new ModelAndView("products","products",new Products());
+	mv.addObject("proddata",mydata);
+	return mv;
+}
+*/
+}

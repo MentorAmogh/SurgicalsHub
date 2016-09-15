@@ -1,0 +1,72 @@
+package com.group.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.group.DAO.supplierDAO;
+import com.group.model.Category;
+import com.group.model.Supplier;
+
+@Controller
+public class supplierController {
+	
+		  @Autowired
+			
+		supplierDAO suppDAO;
+		
+		@RequestMapping(value = "/supplier", method = RequestMethod.GET)
+		public ModelAndView showSupplierr()
+		{
+			String mydata=suppDAO.displayALL();
+			ModelAndView mv=new ModelAndView("supplier","supplier",new Supplier());
+			return mv;
+		}
+		@RequestMapping(value = "/addsupplier", method = RequestMethod.POST)
+		//previous category has this method as getCategory here we have schanged it to addsupplier
+		public ModelAndView addSupplier(Supplier suppins) 
+		{
+			suppDAO.addSupplier(suppins);
+			String mydata=suppDAO.displayALL();
+			ModelAndView mv=new ModelAndView("supplier","supplier",new Supplier());
+			mv.addObject("catdata",mydata);
+			return mv;
+		}
+		//deleting data from table
+		@RequestMapping(value = "/delete", method = RequestMethod.GET)
+		public ModelAndView deleteCategor(@RequestParam("id") String suppid)
+		{
+			String mydata=suppDAO.displayALL();
+			suppDAO.deleteSupplier(suppid);
+			ModelAndView mv=new ModelAndView("supplier","supplier",new Supplier());
+			mv.addObject("catdata",mydata);
+			
+			return mv;
+		}
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+}

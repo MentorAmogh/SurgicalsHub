@@ -1,0 +1,20 @@
+package com.group.controller;
+
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.group.model.Category;
+
+public class addCategory {
+	 @RequestMapping(value = "/category", method = RequestMethod.GET)
+	   public String getCategory() {
+		return "category";
+	      
+	  }
+	 @RequestMapping(value = "/category", method = RequestMethod.POST)
+	 public String postregister() {
+		return "addCategory";
+		}
+}

@@ -1,0 +1,22 @@
+package com.group.model;
+
+public class UserCredentials {
+private String UserId;
+private String UPassword;
+private String role="User";
+private boolean status =true;
+
+}
+public String getUserId() {
+	
+	return UserId;ialspublic void setUserId(String userId) {
+	UserId = userId;
+}
+public String getUPassword() {
+	return UPassword;
+}
+public void setUPassword(String uPassword) {
+	UPassword = uPassword;
+}
+
+}

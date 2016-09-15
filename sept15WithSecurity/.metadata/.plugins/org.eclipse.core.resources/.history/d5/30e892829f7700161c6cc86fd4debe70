@@ -1,0 +1,9 @@
+package com.group.model;
+
+public class Supplier {
+	String suppid;
+	String	suppname;
+	String suppaddr;
+	String suppphn;
+	String suppemail;
+}

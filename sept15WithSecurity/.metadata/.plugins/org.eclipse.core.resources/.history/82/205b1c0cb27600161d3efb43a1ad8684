@@ -1,0 +1,28 @@
+package com.group.model;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table (name="CategoryDetails")
+public class deletecategory 
+{
+	public String getRcatid() {
+		return rcatid;
+	}
+	public void setRcatid(String rcatid) {
+		this.rcatid = rcatid;
+	}
+	public String getRcatdesc() {
+		return rcatdesc;
+	}
+	public void setRcatdesc(String rcatdesc) {
+		this.rcatdesc = rcatdesc;
+	}
+	@Id
+	private String	rcatid;
+	@Column
+	private String rcatdesc;
+}

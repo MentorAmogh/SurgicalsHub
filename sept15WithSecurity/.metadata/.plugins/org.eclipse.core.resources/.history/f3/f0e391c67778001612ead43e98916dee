@@ -1,0 +1,20 @@
+package com.group.DAO;
+import java.util.*;
+
+import org.springframework.stereotype.Repository;
+
+import com.group.model.*;
+
+@Repository
+public class productsDAO 
+{
+	
+List<Products> pobj;
+	
+public List<Products> display()
+{
+	pobj=new ArrayList<Products>();
+	
+	return pobj;
+}
+}
