@@ -1,23 +1,34 @@
 package com.group.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class UserDetails {
+	@Id
 	private String userid;
-	private String Custname;
-	private String Mobile;
-	private String Email;
-	private String Address;
-	private transient String password;
+	@Column
+	private String username;
 	public String getUserid() {
 		return userid;
 	}
 	public void setUserid(String userid) {
 		this.userid = userid;
 	}
-	public String getCustname() {
-		return Custname;
+	@Column
+	private String Mobile;
+	@Column
+	private String Email;
+	@Column
+	private String Address;
+	private transient String rpassword;
+	
+	public String getUsername() {
+		return username;
 	}
-	public void setCustname(String custname) {
-		Custname = custname;
+	public void setUsername(String username) {
+		this.username = username;
 	}
 	public String getMobile() {
 		return Mobile;
@@ -37,10 +48,11 @@ public class UserDetails {
 	public void setAddress(String address) {
 		Address = address;
 	}
-	public String getPassword() {
-		return password;
+	public String getRpassword() {
+		return rpassword;
 	}
-	public void setPassword(String password) {
-		this.password = password;
-	}  
+	public void setRpassword(String rpassword) {
+		this.rpassword = rpassword;
+	}
+	
 }

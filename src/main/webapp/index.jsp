@@ -124,4 +124,7 @@ text-shadow: #fff 0 -1px 24px, #ff0 0 -2px 30px, #ff8000 0 -10px 20px, red 0 -18
   <img src="resources/images/JMS.jpg" height="120" width="120"  class="img-circle"/>		
   <img src="resources/images/meril.jpg" height="120" width="120" class="img-circle"/>		
 </center>
+
+
+
 </body>

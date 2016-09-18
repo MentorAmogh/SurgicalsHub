@@ -1,11 +1,14 @@
+
 package com.group.model;
 
 public class Register {
 	
+
+}
+	/*	
 private String rname;
 private String rid;
-private String rpassword;
-private String repassword;
+transient private String rpassword;
 private String remail;
 private String rmobile;
 private String raddress;
@@ -21,20 +24,14 @@ public String getRid() {
 public void setRid(String rid) {
 	this.rid = rid;
 }
+public String getRemail() {
+	return remail;
+}
 public String getRpassword() {
 	return rpassword;
 }
 public void setRpassword(String rpassword) {
 	this.rpassword = rpassword;
-}
-public String getRepassword() {
-	return repassword;
-}
-public void setRepassword(String repassword) {
-	this.repassword = repassword;
-}
-public String getRemail() {
-	return remail;
 }
 public void setRemail(String remail) {
 	this.remail = remail;
@@ -53,3 +50,4 @@ public void setRaddress(String raddress) {
 }
 
 }
+*/

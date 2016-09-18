@@ -25,34 +25,45 @@
 <!-- strat-contact-form -->	
 <div class="contact-form">
 <!-- start-form -->
-<form:form action="#" method="get" commandName="login">
+<form action="perform_login" method="post">
 	
-		<font bsize="16">Login Into Your Account</font>
+		<font size="16">Login Into Your Account</font>
 	    <ul>
 	        <li>
-				<form:input type="text" path="UserId" placeholder="abcd@gmail.com"/>
-			      
-	        
-	        
-	            <img src="resources/images/contact.png" alt="errrrrrrrr" height="30" width="40">
+				User Name<input type="text" name="username" placeholder="abcd@gmail.com"/>
+			    <img src="resources/images/contact.png" alt="errrrrrrrr" height="25" width="25">
 	        </li>
+	        <br>
 	        <li>
-	            <form:input type="password" path="UPassword" placeholder="password"/>
-	               
+	           Password &nbsp; <input type="password" name="password" placeholder="password"/>
 	            <nobr></nobr>
-	            <img src="resources/images/lock.png" alt="errrrrrrrr" height="30" width="40">
+	            <img src="resources/images/lock.png" alt="errrrrrrrr" height="15" width="15">
 	        </li>
+	      	<!-- 
+	      	<br>
+	        <li>
+	            Role &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="role" placeholder="Role"/>
+	               
+	        </li>
+	        <br>
+	        
+	        <li>
+	            Enabled &nbsp; <input type="checkbox" name="enabled" placeholder="Enabled"/>
+        </li>
+ -->
+	        
+
          </ul>
-       	 	<input type="submit" value="Sign In"/>
+       	 	<center><input type="submit" value="Sign In"/></center>
       <div class="forgot">
 			<a href="#">forgot password?</a>
 		</div>	
 		<div class="clear"></div>	
-	</form:form>
+	</form>
 <!-- end-form -->
 <!-- start-account -->
 <div class="account">
-	<h2><a href="#">Don' have an account? Sign Up!</a></h2>
+	<a href="#">Don' have an account? Sign Up!</a>
     <div class="span"><a href="#"><img src="resources/images/facebook.jpg" alt="errrrrrrr" height="20" width="20"/><i>Sign In with Facebook</i><div class="clear"></div></a></div>	
     <div class="span1"><a href="#"><img src="resources/images/twitter.jpg" alt="errrrrrrr" height="20" width="20"/><i>Sign In with Twitter</i><div class="clear"></div></a></div>
     <div class="span2"><a href="#"><img src="resources/images/gplus.png" alt="errrrr" height="20" width="20"/><i>Sign In with Google+</i><div class="clear"></div></a></div>

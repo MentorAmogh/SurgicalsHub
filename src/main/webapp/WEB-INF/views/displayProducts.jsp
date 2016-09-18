@@ -19,8 +19,14 @@
 <!-- //for-mobile-apps -->
 <!--Google Fonts-->
 <link href='//fonts.googleapis.com/css?family=Roboto+Condensed:400,700' rel='stylesheet' type='text/css'>
-</head>
+<link rel="stylesheet" type="text/css" href="resources/css/magnifier.css">
 
+
+
+</head>
+<script>
+$("#zoom_01").elevateZoom();
+</script>
 <style>
 .center {
     margin: auto;
@@ -43,23 +49,25 @@ left:200px;
 }
 </style>
 <body>
+
+
 <div class = "row">
    
    <div class = "col-sm-6 col-md-3">
       <div class = "thumbnail">
-         <img src = "resources/images/7.jpg" alt = "Generic placeholder thumbnail">
+         <img src = "resources/images/7.jpg" alt = "Generic placeholder thumbnail" id="zoom_01" data-zoom-image="resources/images/lP003.jpg"/>
       </div>
       
       <div class = "caption">
-         <h3>Thumbnail label</h3>
-         <p>Some sample text. Some sample text.</p>
+         <h3>Dental Surgical Chair</h3>
+         <p>Very much helpful for Dentists.</p>
          
          <p>
-            <a href = "#" class = "btn btn-primary" role = "button">
+            <a href = "addtocart?prodid=P001" class = "btn btn-warning" role = "button">
                Add To Cart
             </a> 
             
-            <a href = "#" class = "btn btn-default" role = "button">
+            <a href = "addtowishlist?prodid=P002" class = "btn btn-success" role = "button">
                Add To Wish List
             </a>
          </p>
@@ -73,15 +81,15 @@ left:200px;
       </div>
       
       <div class = "caption">
-         <h3>Thumbnail label</h3>
-         <p>Some sample text. Some sample text.</p>
+         <h3>Dental Thones </h3>
+         <p>Thones used by dentists for cleanup purpose.</p>
          
          <p>
-            <a href = "#" class = "btn btn-primary" role = "button">
+            <a href = "addtocart?prodid=P002" class = "btn btn-warning" role = "button">
              Add To Cart
             </a> 
             
-            <a href = "#" class = "btn btn-default" role = "button">
+            <a href = "addtowishlist" class =  "btn btn-success" role = "button">
            Add To Wish List
             </a>
          </p>
@@ -95,15 +103,15 @@ left:200px;
       </div>
       
       <div class = "caption">
-         <h3>Thumbnail label</h3>
-         <p>Some sample text. Some sample text.</p>
+         <h3>Surgical Sessors</h3>
+         <p>Very much useful in cutting properly.</p>
          
          <p>
-            <a href = "#" class = "btn btn-primary" role = "button">
+            <a href ="addtocart?prodid=P003" class = "btn btn-warning" role = "button">
                Add To Cart
             </a> 
             
-            <a href = "#" class = "btn btn-default" role =" button">
+            <a href = "addtowishlist" class =  "btn btn-success" role =" button">
              Add To Wish List
             </a>
          </p>
@@ -117,15 +125,15 @@ left:200px;
       </div>
       
       <div class = "caption">
-         <h3>Thumbnail label</h3>
-         <p>Some sample text. Some sample text.</p>
+         <h3>Surgical Forceps</h3>
+         <p>Most important handy tool to pick up and hold skin.</p>
          
          <p>
-            <a href = "#" class = "btn btn-primary" role = "button">
+            <a href = "addtocart?prodid=P004" class = "btn btn-warning" role = "button">
              Add To Cart
             </a> 
             
-            <a href = "#" class = "btn btn-default" role = "button">
+            <a href = "#" class =  "btn btn-success" role = "button">
             Add To Wish List
             </a>
          </p>

@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-
+ <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
   
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -20,6 +20,8 @@ h1 {
 </style>
 
 <body>
+
+
 	<!-- img src="resources/images/header.jpg" should try in corusal-->
 	<span background-color="bisque"><h1><font face="Rio Grande Striped" size="56"><center>Surgicals Hub</center></font></h1></span>
 		&nbsp; Follow us on:
@@ -37,6 +39,21 @@ h1 {
 		<a href="https://www.youtube.com" class="btn btn-social-icon btn-youtube">
     		<span class="fa fa-youtube"><img class="img-circle" src="resources/images/youtube.jpg" height="50" width="50"></span>
 		  </a>
+
+<c:choose>
+
+<c:when test="UserLoggedIn">
+<c:out value="Welcome ${UserLoggedIn}">
+</c:out>
+</c:when>
+<c:otherwise>
+
+<c:out value= "Welcome ${UserLoggedIn}">
+
+</c:out>
+</c:otherwise>
+</c:choose>
+	<p align="right"> Visitor-></p>
 	<br>
 		<nav class="navbar navbar-inverse" >
 			<div class="container-fluid">
@@ -50,7 +67,7 @@ h1 {
 					<li><a href="dispproducts">View Products </a></li>
 					<li><a href="contact">Contact Us <span class="glyphicon glyphicon-envelope"></span></a></li>
 					<li><a href="about">About Us </a></li>
-					<li><a href="admin">Admin Console<span class="glyphicon glyphicon-log-out"></span></a></li>
+					
 					
 				</ul>
 					<form class="navbar-form" role="search">

@@ -26,17 +26,17 @@
 				
 			   <tr>
 			   	<td>
-			
-			   		 <form:form action="addUser" method="get" commandName="Register">
-					 Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input  path="rname" placeholder="User Name"/>  <br> 
-					 Id<form:input  path="rid" placeholder="User Id"/><br>					
-					 Password<form:password path="rpassword" placeholder="Password" required="true"/><br>
-					 Re-Enter Password<form:password path="repassword" placeholder="Re-Password" required="true"/><br>
-					 Mobile<form:input type="rmobile"  path="remail" placeholder="Email" required="required"/><br>
-					 Email<form:input type="remail"  path="remail" placeholder="Email" required="required"/><br>
-					 Address<form:input  path="raddress" placeholder="Address"/><br>
-					<input type="submit" value="Add User"/>
-					</form:form>
+				
+			   		 <form action="addUser" method="post">
+					 User Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type=text name="username" placeholder="User Name"/>  <br> 
+					 Id<input type="text" name="userid" placeholder="User Id"/><br>					
+					 Password<input type="password" name="rpassword" placeholder="Password"/><br>
+					 Confirm Password<input type="password" name="confpassword" placeholder="Re-Password"/><br>
+					 Mobile<input type="text" name="Mobile"  placeholder="Email"/><br>
+					 Email<input type=text name="Email" placeholder="Email"/><br>
+					 Address<input  name="Address" placeholder="Address"/><br>
+					<input type="submit" value="Add User Via Register"/>
+					</form>
 		
 				</td>
 					</td>

@@ -37,10 +37,6 @@ public class CategoryController {
 		}
 
 	
-	
-	
-	
-	
 	//Delete the categories
 	@RequestMapping(value = "/delete", method = RequestMethod.GET)
 	public ModelAndView deleteCategor(@RequestParam("id") String cid)

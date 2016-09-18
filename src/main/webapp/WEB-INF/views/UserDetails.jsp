@@ -43,8 +43,8 @@ left:200px;
 
 			   <tr><td> <img src="resources/images/image9.jpg"/></td>
 			   <td>
-					 <form:form action="adduser" method="post" commandName="Register">
-					 Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input  path="uname" placeholder="User Name"/>  <br> 
+					 <form:form action="adduser" method="post" commandName="UserDetails">
+					 User Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form:input  path="uname" placeholder="User Name"/>  <br> 
 					 Id<form:input  path="uid" placeholder="User Id"/><br>					
 					 Password<form:password path="upassword" placeholder="Password" required="true"/><br>
 					ReEnter Password<form:password path="urepassword" placeholder="Re-Password" required="true"/><br>
