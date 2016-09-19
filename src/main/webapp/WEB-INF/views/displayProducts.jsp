@@ -55,7 +55,7 @@ left:200px;
    
    <div class = "col-sm-6 col-md-3">
       <div class = "thumbnail">
-         <img src = "resources/images/7.jpg" alt = "Generic placeholder thumbnail" id="zoom_01" data-zoom-image="resources/images/lP003.jpg"/>
+         <img src = "resources/images/P001.jpg" alt = "Generic placeholder thumbnail" id="zoom_01" data-zoom-image="resources/images/lP003.jpg"/>
       </div>
       
       <div class = "caption">

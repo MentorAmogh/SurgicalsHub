@@ -2,7 +2,8 @@
     pageEncoding="ISO-8859-1"%>
     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>   
-<%@ include file="/WEB-INF/views/adminHeader.jsp"%>
+<!-- Previous Admin Header -->
+<jsp:include page="CommonHeader.jsp"/>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <!DOCTYPE HTML>
 <html>
@@ -10,7 +11,7 @@
 
 
 <!-- Custom Theme files -->
-<link href="resources/css/clastyle.css" rel="stylesheet" type="text/css" media="all"/>
+<link href="resourc	es/css/clastyle.css" rel="stylesheet" type="text/css" media="all"/>
 <!-- for-mobile-apps -->
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -20,7 +21,21 @@
 <!--Google Fonts-->
 <link href='//fonts.googleapis.com/css?family=Roboto+Condensed:400,700' rel='stylesheet' type='text/css'>
 </head>
+<style>
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
 
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(odd){background-color: skyblue}
+
+tr:nth-child(even){background-color: bisque}
+</style>
 <style>
 .center {
     margin: auto;
@@ -103,7 +118,7 @@ ${check}
 	</div>	
 	<div class="center">    		
 	<table >
-<tr><th>Cat Id</th><th>Category Name</th><th>Description</th></tr>
+<tr><th>Cat Id</th><th>Category Name</th><th>Description</th><th>Delete Product</th><th>Edit Product</th></tr>
 Search <input type="text" placeholder="Search products" ng-model="searchText"/>
 <br><br>
 <tr class="success" ng-repeat="product in products | filter:searchText">
@@ -111,14 +126,11 @@ Search <input type="text" placeholder="Search products" ng-model="searchText"/>
                 <td><a href="Description?pid={{product.pid}}">{{product.pid}}</a></td>
 				 --> 
                 <td>{{product.rcatid}}</td>
-				
                 <td>{{product.rcatname}}</td>
                 <td>{{product.rcatdesc}}</td>
-                <td>{{product.datatoupdate}}</td>
-                
-                
-                <td><a href="delete?id={{product.rcatid}}">Delete{{product.rcatid}}</td><td></td>
-                <td><a href="update?id={{product.rcatid}}">Update{{product.rcatid}}</td><td>{{product.datatoupdate}}</td>
+             	
+                <td><a href="delete?id={{product.rcatid}}">Delete{{product.rcatid}}</td>
+                <td><a href="update?id={{product.rcatid}}">Update{{product.rcatid}}</td>
            </tr>
 <tr>
 <td>

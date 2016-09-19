@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
     <%@ include file="/WEB-INF/views/CommonHeader.jsp"%>
+    
+    
 <!--
 Author: W3layouts
 Author URL: http://w3layouts.com
@@ -48,7 +50,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<input type="text" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}" required="">
 						<input type="email" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="">
 						<input type="text" value="Telephone" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Telephone';}" required="">
-						<textarea type="text"  onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message...';}" required="">Message...</textarea>
+						<div height="20%">
+						<textarea rows="4" cols="50">Message...</textarea>
+						</div>
+						<br>
 						<input type="submit" value="Submit" >
 					</form>
 				</div>
@@ -98,13 +103,23 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 	</div>
 	<div class="footer-copy">
-		<p>© 2016 Erudition. All rights reserved | Design by <a href="http://w3layouts.com/"> W3layouts</a></p>
-		<ul>
-			<li><a href="#" class="facebook"></a></li>
-			<li><a href="#" class="in"></a></li>
-			<li><a href="#" class="v"></a></li>
-			<li><a href="#" class="p"></a></li>
-		</ul>
+		<p>© 2016 All rights reserved | Design by <a href="http://amoghchitnis.com/"> Amogh Chitnis</a></p>
+	
+			 <a href="http://twitter.com/Kyokushinowa" class="btn btn-social-icon btn-twitter">
+    		<span class="fa fa-twitter"><img class="img-circle" src="resources/images/twitter.jpg" height="50" width="50"></span>
+		  </a>
+		<a href="https://www.instagram.com" class="btn btn-social-icon btn-instagram">
+    		<span class="fa fa-instagram"><img class="img-circle" src="resources/images/insta.jpg" height="50" width="50"></span>
+		  </a>
+		  
+		<a href="http://facebook.com/alterowo" class="btn btn-social-icon btn-facebook">
+    		<span class="fa fa-facebook"><img class="img-circle" src="resources/images/facebook.jpg" height="50" width="50"></span>
+		  </a>
+		  
+		<a href="https://www.youtube.com" class="btn btn-social-icon btn-youtube">
+    		<span class="fa fa-youtube"><img class="img-circle" src="resources/images/youtube.jpg" height="50" width="50"></span>
+		  </a>
+	
 	</div>
 <!-- //footer -->
 <!-- for bootstrap working -->

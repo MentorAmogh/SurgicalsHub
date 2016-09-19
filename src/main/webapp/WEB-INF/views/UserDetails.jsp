@@ -1,6 +1,6 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
-<%@ include file="/WEB-INF/views/adminHeader.jsp"%>
-<!DOCTYPE HTML>
+<!-- <%@ include file="/WEB-INF/views/adminHeader.jsp"%> -->
+<jsp:include page="CommonHeader.jsp"/><!DOCTYPE HTML>
 <html>
 <head>
 

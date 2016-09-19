@@ -29,5 +29,16 @@ public class CartController {
 		return mv;
 	}
 	
+	@RequestMapping(value = "/checkout", method = RequestMethod.GET)
+	public String Cart()
+	{
+
+		//String mydata=atc.displayCartProd(cartid);
+		//ModelAndView mv=new ModelAndView("AddToCart","addtocart",new addtocart());
+	//	String catJSonList=atc.displayRecord(cartid);
+		//mv.addObject("cartdata",catJSonList);
+	//	mv.addObject("cartdata",mydata);
+		return "checkout";
+	}
 	
 }

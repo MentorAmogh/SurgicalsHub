@@ -20,7 +20,9 @@ h1 {
 </style>
 
 <body>
-
+	<%
+	 Integer hitsCount = (Integer)application.getAttribute("hitCounter");
+     %>
 
 	<!-- img src="resources/images/header.jpg" should try in corusal-->
 	<span background-color="bisque"><h1><font face="Rio Grande Striped" size="56"><center>Surgicals Hub</center></font></h1></span>
@@ -53,7 +55,7 @@ h1 {
 </c:out>
 </c:otherwise>
 </c:choose>
-	<p align="right"> Visitor-></p>
+	<p align="right"> Visitor-><c:out value="${hitsCounts}"></c:out></p>
 	<br>
 		<nav class="navbar navbar-inverse" >
 			<div class="container-fluid">
@@ -61,26 +63,40 @@ h1 {
 					<a class="navbar-brand" href="#"><img src="resources/images/mylogo.gif" height="20" width="20"></a>
 				</div>
 				<ul class="nav navbar-nav">
-					<li class="active"><a href="index.jsp">Home <span class="glyphicon glyphicon-home"></span></a></li>
-					<li><a href="login">Login <span class="glyphicon glyphicon-log-in"></span></a></li>
-					<li><a href="register">Register <span class="glyphicon glyphicon-registration-mark"></span></a></li>
-					<li><a href="dispproducts">View Products </a></li>
-					<li><a href="contact">Contact Us <span class="glyphicon glyphicon-envelope"></span></a></li>
-					<li><a href="about">About Us </a></li>
-					
-					
+			
+			 <c:choose>
+    			<c:when test="${sessionScope.UserLoggedIn == null}">
+       				<li><a href="index.jsp">Home<span class="glyphicon glyphicon-home"></span></a></li>
+                	<li><a href="about">About Us</a></li>
+                	<li><a href="contact">Contact Us<span class="glyphicon glyphicon-envelope"></span></a></li>
+                	<li><a href="dispproducts">View Products</a></li>
+                	<li><a href="register">Register <span class="glyphicon glyphicon-registration-mark"></span></a></li>
+	                <li><a href="login">LogIn</a></li>
+    			</c:when>
+    			<c:when test="${sessionScope.UserLoggedIn != 'Administrator'}">
+    						<li><a href="index.jsp">Home<span class="glyphicon glyphicon-home"></span></a></li>
+                	<li><a href="about">About Us</a></li>
+                	<li><a href="contact">Contact Us<span class="glyphicon glyphicon-envelope"></span></a></li>
+                	<li><a href="dispproducts">View Products</a></li>
+                	<li><a href="register">Register <span class="glyphicon glyphicon-registration-mark"></span></a></li>
+	             	<li><a href="perform_Logout">Logout</a></li>
+                </c:when>
+    			<c:otherwise>
+    			<li><a href="disproducts">Product <span class="glyphicon glyphicon-registration-mark"></span></a></li>
+        			<li><a href="category">Catagory</a></li>
+					</li><a href="disproduct">Supplier</a>    </li>
+					<li><a href="perform_Logout">Logout</a></li>
+    			</c:otherwise>
+				</c:choose>
 				</ul>
-					<form class="navbar-form" role="search">
-					<div class="input-group">
-						<input type="text" class="form-control" placeholder="Search...">
-						<span class="input-group-btn">
-							<button type="submit" class="btn btn-default">
-								<span class="glyphicon glyphicon-search">
-									<span class="sr-only">Search...</span>
-								</span>
-							</button>
-						</span>
-				
-				</div>
-				</form>
-		</nav>
+				<p>${sessionScope.UserLoggedIn}</p>
+             </div>
+          </div>
+        </div>
+          </div>
+    </div>
+  </div>
+				</ul>
+					
+					<!-- Previously there was search option Over here -->
+							</nav>

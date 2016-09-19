@@ -2,7 +2,8 @@
     pageEncoding="ISO-8859-1"%>
     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>   
-<%@ include file="/WEB-INF/views/adminHeader.jsp"%>
+<!-- <%@ include file="/WEB-INF/views/adminHeader.jsp"%> -->
+<jsp:include page="CommonHeader.jsp"/>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <!DOCTYPE HTML>
 <html>

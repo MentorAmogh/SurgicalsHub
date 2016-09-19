@@ -38,7 +38,7 @@ public class productcontroller {
 			return "displayProducts";
 		}
 	
-		@RequestMapping(value = "/disproducts", method = RequestMethod.GET)
+		@RequestMapping(value = "/disproducts", method = RequestMethod.POST)
 		public ModelAndView showProducts()
 		{
 			boolean check=false;

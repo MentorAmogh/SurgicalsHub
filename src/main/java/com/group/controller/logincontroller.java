@@ -83,7 +83,7 @@ public class logincontroller {
 	}
 	@RequestMapping(value="/performLogout")
 	public String logoutSuccess() {
-		
+		System.out.println("Logged Out");
 		 //session.setAttribute("UserLoggedIn", "");
 		return "/Logout";
 	}

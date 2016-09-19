@@ -125,6 +125,18 @@ text-shadow: #fff 0 -1px 24px, #ff0 0 -2px 30px, #ff8000 0 -10px 20px, red 0 -18
   <img src="resources/images/meril.jpg" height="120" width="120" class="img-circle"/>		
 </center>
 
-
+<%
+    Integer hitsCounts = (Integer)application.getAttribute("hitCounter");
+    if( hitsCounts ==null || hitsCounts == 0 )
+    {
+       hitsCounts = 1;
+    }
+    else{
+     
+       hitsCounts += 1;
+    }
+    application.setAttribute("hitCounter", hitsCount);
+    System.out.print("count"+hitsCounts);
+%>
 
 </body>
